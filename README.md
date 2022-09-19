@@ -6,6 +6,8 @@
 
 ## Profile
 ![Leetcode Stats](https://leetcard.jacoblin.cool/fanta335?ext=heatmap)
+- [Leet Code profile page](https://leetcode.com/fanta335/)
+
 
 ## References
 - [Tech Interview Handbook](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/)
