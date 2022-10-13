@@ -33,18 +33,30 @@ class Solution {
             slow = slow.next;
             fast = fast.next.next;
         }
-        if (fast != null && fast.next == null) {
+        if (fast != null) {
             slow = slow.next;
         }
+        slow = reverse(slow);
+        fast = head;
         while (slow != null) {
-            if (stack.peek().val != slow.val) {
-                break;
+            if (fast.val != slow.val) {
+                return false;
             }
-            stack.pop();
+            fast = fast.next;
             slow = slow.next;
         }
+        return true;
+    }
 
-        return stack.isEmpty();
+    private ListNode reverse(ListNode head) {
+        ListNode next = null;
+        while (head != null) {
+            ListNode temp = head.next;
+            head.next = next;
+            next = head;
+            head = temp;
+        }
+        return next;
     }
 }
 // @lc code=end
