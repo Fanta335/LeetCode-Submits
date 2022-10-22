@@ -1,6 +1,3 @@
-import java.util.LinkedList;
-import java.util.Queue;
-
 /*
  * @lc app=leetcode id=114 lang=java
  *
@@ -29,30 +26,17 @@ class TreeNode {
 
 
 class Solution {
-    public void flatten(TreeNode root) {
-        Queue<TreeNode> q = new LinkedList<>();
-        preorder(root, q);
-        toLinkedList(q);
-    }
+    TreeNode prev = null;
 
-    private void preorder(TreeNode node, Queue<TreeNode> q) {
-        if (node == null) {
+    public void flatten(TreeNode root) {
+        if (root == null) {
             return;
         }
-        q.offer(node);
-        preorder(node.left, q);
-        preorder(node.right, q);
-    }
-
-    private void toLinkedList(Queue<TreeNode> q) {
-        TreeNode dummy = new TreeNode(0);
-        TreeNode curr = dummy;
-        while (!q.isEmpty()) {
-            TreeNode node = q.poll();
-            curr.right = node;
-            curr.left = null;
-            curr = curr.right;
-        }
+        flatten(root.right);
+        flatten(root.left);
+        root.right = prev;
+        root.left = null;
+        prev = root;
     }
 }
 // @lc code=end
