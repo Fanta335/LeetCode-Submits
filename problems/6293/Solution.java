@@ -1,6 +1,3 @@
-import java.util.HashSet;
-import java.util.Set;
-
 class Solution {
   public long countGood(int[] nums, int k) {
     int N = nums.length;
