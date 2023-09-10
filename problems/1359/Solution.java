@@ -1,0 +1,11 @@
+class Solution {
+  long res = 1, modulo = (long) 1e9 + 7;
+
+  public int countOrders(int n) {
+    for (int i = 1; i <= n; i++) {
+      res = res * (i * 2 - 1) * i % modulo;
+    }
+    return (int) res;
+  }
+}
+
