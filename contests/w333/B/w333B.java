@@ -1,4 +1,4 @@
-class Solution {
+class w333B {
   public int minOperations(int n) {
     int c = 0;
     while (n != 0) {

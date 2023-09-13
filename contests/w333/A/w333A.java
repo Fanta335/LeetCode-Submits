@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.List;
 
-class Solution {
+class w333A {
   public int[][] mergeArrays(int[][] nums1, int[][] nums2) {
     List<int[]> list = new LinkedList<>();
     int i1 = 0, i2 = 0;
