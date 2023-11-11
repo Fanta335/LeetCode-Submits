@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-class w332B {
+class Solution {
   public long countFairPairs(int[] nums, int lower, int upper) {
     Arrays.sort(nums);
     long res = 0;
